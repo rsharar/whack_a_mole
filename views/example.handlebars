@@ -8,11 +8,11 @@
     <div class = "navbar-item">
       Whack-A-Mole
     </div>
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    {{!-- <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
-    </a>
+    </a> --}}
   </div>
 
     <div class="navbar-end">
@@ -38,10 +38,62 @@
 {{!-- Leaderboards --}}
 <div class="columns is-mobile" id="landing-page-container">
   <div class="column leaderboard">
-    Personal Best
+    PERSONAL BEST
+    <div class="column">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Level (Difficulty)</th>
+          <th>Score (Sec)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Easy</td>
+          <td>10.5</td>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td>20.2</td>
+        </tr>
+        <tr>
+          <td>Hard</td>
+          <td>45.2</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
   </div>
   <div class="column leaderboard">
-    Overall Leaderboard
+    OVERALL LEADERBOARD
+    <div class="column">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Level (Difficulty)</th>
+          <th>Score (Sec)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Barack Obama</td>
+          <td>Easy</td>
+          <td>12.4</td>
+        </tr>
+        <tr>
+          <td>George Lucas</td>
+          <td>Easy</td>
+          <td>19.4</td>
+        </tr>
+        <tr>
+          <td>Prince</td>
+          <td>Easy</td>
+          <td>52.2</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
   </div>
 </div>
 
