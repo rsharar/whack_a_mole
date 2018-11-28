@@ -1,3 +1,17 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+.footer {
+  border: 2px solid black;
+  text-align: center;
+  background-color: #f2b632;
+  color: #252839;
+}
+
+
+
+/* dark purple: #252839
+gray: #677077
+silver: #b5b5b7
+yellow: #f2b632 */
