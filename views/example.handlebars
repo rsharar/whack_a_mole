@@ -1,14 +1,52 @@
-<div class="columns">
-  <div class="column">
-    First column
+{{!-- Header --}}
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item">
+      <img src="/img/logo.png" width="34" height="40">
+    </a>
+
+    <div class = "navbar-item">
+      Whack-A-Mole
+    </div>
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-light">
+            My Account
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+{{!-- Play Button --}}
+<div class = "columns is-mobile has-text-centered">
   <div class="column">
-    Second column
+    <a class="button is-primary" id="playbtn">PLAY NEW GAME!</a>
   </div>
 </div>
 
 
+{{!-- Leaderboards --}}
+<div class="columns is-mobile" id="landing-page-container">
+  <div class="column leaderboard">
+    Personal Best
+  </div>
+  <div class="column leaderboard">
+    Overall Leaderboard
+  </div>
+</div>
 
+
+{{!-- Footer --}}
 <footer class="footer">
   <div class="content has-text-centered">
     <p>
