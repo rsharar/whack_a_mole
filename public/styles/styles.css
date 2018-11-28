@@ -9,6 +9,11 @@
   color: #252839;
 }
 
+.columns {
+  border: 2px solid black;
+  text-align: center;
+}
+
 
 
 /* dark purple: #252839
