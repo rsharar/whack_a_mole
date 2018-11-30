@@ -2,14 +2,18 @@
   line-height: 2.5;
 }
 
+
 .footer {
   border: 2px solid black;
   text-align: center;
-  background-color: #b5b5b7;
-  color: #252839;
-  height: 10px;
+  background-color: #f2b632;
+  color: #677077;
+  height: 5px;
 }
 
+#playbtn {
+  font-weight: bold;
+}
 #landing-page-container {
   border: 2px solid black;
   text-align: center;
@@ -21,6 +25,12 @@
   font-size: 18px;
 }
 
+
+#gamebox-container{
+  border: 2px black solid;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 /* dark purple: #252839
 gray: #677077
