@@ -3,7 +3,7 @@
 }
 
 
-.footer {
+.footer{
   border: 2px solid black;
   text-align: center;
   background-color: #f2b632;
@@ -20,7 +20,7 @@
 }
 .leaderboard {
   height: 400px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   text-align: center;
   font-size: 18px;
 }
