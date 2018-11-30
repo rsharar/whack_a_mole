@@ -25,11 +25,18 @@
   font-size: 18px;
 }
 
+.hero-body {
+  background-color: #252839;
+}
 
 #gamebox-container{
   border: 2px black solid;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.homepage-buttons{
+  width: 50px;
 }
 
 /* dark purple: #252839
