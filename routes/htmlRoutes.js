@@ -22,6 +22,10 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/game", function(req, res) {
+    res.render("game", {})
+  })
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
