@@ -1,33 +1,48 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+<body>
+  <section class="hero is-info is-fullheight">
+    
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="column is-6 is-offset-3">
+          <h1 class="title">
+            WHACK-A-BUG
+          </h1>
+          <h2 class="subtitle">
+            Stressed? Frustrated? Let it out and Whack-A-Bug
+          </h2>
+          <div class="box columns has-text-centered">
+            <div class="column">
+              <div class="homepage-buttons">
+                <a class="button is-primary is-medium">
+                  CREATE AN ACCOUNT
+                </a>
+              </div>
+            </div>
+            <div class="column">
+              <div class="home-pagebuttons">
+                <a class="button is-primary is-medium">
+                  LOG IN USING GOOGLE
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+        </div>
       </div>
     </div>
+    </div>
+
+  </section>
+  <script async type="text/javascript" src="../js/bulma.js"></script>
+</body>
+
+
+{{!-- Footer --}}
+<div class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Whack-A-Mole</strong> by <a href="https://jgthms.com">ERA</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
   </div>
 </div>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>

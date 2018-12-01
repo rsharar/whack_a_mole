@@ -1,3 +1,45 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+
+.footer{
+  border: 2px solid black;
+  text-align: center;
+  background-color: #f2b632;
+  color: #677077;
+  height: 5px;
+}
+
+#playbtn {
+  font-weight: bold;
+}
+#landing-page-container {
+  border: 2px solid black;
+  text-align: center;
+}
+.leaderboard {
+  height: 400px;
+  /* border: 2px solid black; */
+  text-align: center;
+  font-size: 18px;
+}
+
+.hero-body {
+  background-color: #252839;
+}
+
+#gamebox-container{
+  border: 2px black solid;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.homepage-buttons{
+  width: 50px;
+}
+
+/* dark purple: #252839
+gray: #677077
+silver: #b5b5b7
+yellow: #f2b632 */
