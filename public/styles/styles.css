@@ -47,8 +47,8 @@ yellow: #f2b632 */
 
 /* Modal classes */
 .instructionsmodal{
-  visibility: hidden;
-}
-.active{
   visibility: visible;
+}
+.hiddenmodal{
+  visibility: hidden;
 }

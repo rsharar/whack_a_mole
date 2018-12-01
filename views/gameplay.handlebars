@@ -66,8 +66,6 @@
     <div class="column is-3"></div>
 </div>
 
-{{!-- Modal test btn --}}
-<button class="button is-success" id="modalbtn">Open modal</button>
 {{!-- Instructions Modal --}}
 <div class="instructionsmodal">
     <div class="modal-background"></div>
@@ -123,14 +121,14 @@
     // Get the button that opens the modal
     var btn = $("#modalbtn");
 
-    // When the user clicks the button, open the modal 
-    btn.on("click", function() {
-        modal.addClass("active");
-    })
-
     // Close modal btn
     $("#closemodalbtn").on("click", function(){
-        modal.removeClass("active");
+        modal.addClass("hiddenmodal");
+    })
+
+    // Close modal when window clicked
+    $(".modal-background").on("click", function(){
+        modal.addClass("hiddenmodal");
     })
 
 </script>
