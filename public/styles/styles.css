@@ -2,11 +2,8 @@
   line-height: 2.5;
 }
 
-.navbar {
-  padding-bottom: 20px;
-}
 
-.footer {
+.footer{
   border: 2px solid black;
   text-align: center;
   background-color: #f2b632;
@@ -23,20 +20,24 @@
 }
 .leaderboard {
   height: 400px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   text-align: center;
   font-size: 18px;
 }
 
-.game-data-header{
-  font-weight: bold;
-
+.hero-body {
+  background-color: #252839;
 }
+
 #gamebox-container{
   border: 2px black solid;
-  height: 400px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
+.homepage-buttons{
+  width: 50px;
+}
 
 /* dark purple: #252839
 gray: #677077
