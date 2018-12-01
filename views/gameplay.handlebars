@@ -4,43 +4,43 @@
         <a class="navbar-item">
             <img src="/img/logo.png" width="34" height="40">
         </a>
-    <div class="navbar-item">
-      Whack-A-Bug
+        <div class="navbar-item">
+            Whack-A-Bug
+        </div>
+        {{!-- <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a> --}}
     </div>
-    {{!-- <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a> --}}
-  </div>
-  <div class="navbar-end navbar-item has-dropdown is-hoverable">
-    <a class="navbar-link">
-      My Profile
-    </a>
-
-    <div class="navbar-dropdown">
-      <a class="navbar-item">
-        Settings
-      </a>
-      <a class="navbar-item">
-        Contact
-      </a>
-      <hr class="navbar-divider">
-      <a class="navbar-item">
-        Log Out
-      </a>
-    </div>
-  </div>
-  {{!-- <div class="navbar-end">
-    <div class="navbar-item">
-      <div class="buttons">
-        <a class="button is-light">
-          My Account
+    <div class="navbar-end navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+            My Profile
         </a>
-      </div>
+
+        <div class="navbar-dropdown">
+            <a class="navbar-item">
+                Settings
+            </a>
+            <a class="navbar-item">
+                Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+                Log Out
+            </a>
+        </div>
     </div>
-  </div> --}}
-  </div>
+    {{!-- <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="buttons">
+                <a class="button is-light">
+                    My Account
+                </a>
+            </div>
+        </div>
+    </div> --}}
+    </div>
 </nav>
 
 {{!-- Gameplay Box --}}
@@ -66,28 +66,71 @@
     <div class="column is-3"></div>
 </div>
 
+{{!-- Modal test btn --}}
+<button class="button is-success" id="modalbtn">Open modal</button>
 {{!-- Instructions Modal --}}
-<div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Modal title</p>
-      <button class="delete" aria-label="close"></button>
-    </header>
-    <section class="modal-card-body">
-      <!-- Content ... -->
-    </section>
-    <footer class="modal-card-foot">
-      <button class="button is-success">Save changes</button>
-      <button class="button">Cancel</button>
-    </footer>
-  </div>
+<div class="instructionsmodal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">HOW TO PLAY</p>
+            <button class="delete" aria-label="close" id="closemodalbtn"></button>
+        </header>
+        <section class="modal-card-body">
+            <p>1. Select your difficulty</p>
+            <div id="choose-difficulty">
+                <div class="dropdown is-active">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
+                            <span>Content</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-item">
+                                <p>You can insert <strong>any type of content</strong> within the dropdown menu.</p>
+                            </div>
+                            <hr class="dropdown-divider">
+                            <div class="dropdown-item">
+                                <p>You simply need to use a <code>&lt;div&gt;</code> instead.</p>
+                            </div>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                This is a link
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <p>2. </p>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success">I'M READY TO SMASH SOME BUGS</button>
+        </footer>
+    </div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script type="text/javascript">
-    $(window).on('load',function(){
-        $('.modal').modal('show');
-    });
+    // Get the modal
+    var modal = $(".instructionsmodal");
+
+    // Get the button that opens the modal
+    var btn = $("#modalbtn");
+
+    // When the user clicks the button, open the modal 
+    btn.on("click", function() {
+        modal.addClass("active");
+    })
+
+    // Close modal btn
+    $("#closemodalbtn").on("click", function(){
+        modal.removeClass("active");
+    })
+
 </script>

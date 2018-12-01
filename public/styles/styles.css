@@ -43,3 +43,12 @@
 gray: #677077
 silver: #b5b5b7
 yellow: #f2b632 */
+
+
+/* Modal classes */
+.instructionsmodal{
+  visibility: hidden;
+}
+.active{
+  visibility: visible;
+}
