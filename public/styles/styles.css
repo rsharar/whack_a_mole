@@ -52,3 +52,12 @@ yellow: #f2b632 */
 .hiddenmodal{
   visibility: hidden;
 }
+
+/* active btn */
+.activedifficulty{
+  background-color: lightblue;
+}
+
+.active{
+  visibility: visible;
+}
