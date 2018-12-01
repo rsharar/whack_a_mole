@@ -43,3 +43,21 @@
 gray: #677077
 silver: #b5b5b7
 yellow: #f2b632 */
+
+
+/* Modal classes */
+.instructionsmodal{
+  visibility: visible;
+}
+.hiddenmodal{
+  visibility: hidden;
+}
+
+/* active btn */
+.activedifficulty{
+  background-color: lightblue;
+}
+
+.active{
+  visibility: visible;
+}
