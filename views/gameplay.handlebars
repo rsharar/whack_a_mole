@@ -1,43 +1,131 @@
-<h2>Hit the lit circles!</h2>
+{{!-- Header --}}
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item">
+      <img src="/img/logo.png" width="34" height="40">
+    </a>
+    <div class="navbar-item">
+      Whack-A-Bug
+    </div>
+    {{!-- <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a> --}}
+  </div>
+  <div class="navbar-end navbar-item has-dropdown is-hoverable">
+    <a class="navbar-link">
+      My Profile
+    </a>
 
+    <div class="navbar-dropdown">
+      <a class="navbar-item">
+        Settings
+      </a>
+      <a class="navbar-item">
+        Contact
+      </a>
+      <hr class="navbar-divider">
+      <a class="navbar-item">
+        Log Out
+      </a>
+    </div>
+  </div>
+  {{!-- <div class="navbar-end">
+    <div class="navbar-item">
+      <div class="buttons">
+        <a class="button is-light">
+          My Account
+        </a>
+      </div>
+    </div>
+  </div> --}}
+  </div>
+</nav>
 
-{{!-- loop through cols in a loop through rows --}}
-<div id="row">
-    <div class="col">
+{{!-- Gameplay Box --}}
+<div class="columns is-mobile has-text-centered">
+  <div class="column is-3"></div>
+  <div class="column is-2 game-data-header">BUGS LEFT</div>
+  <div class="column is-2 game-data-header">DIFFICULTY</div>
+  <div class="column is-2 game-data-header">TIME</div>
+  <div class="column is-3"></div>
+</div>
+<div class="columns is-mobile has-text-centered">
+  <div class="column is-3"></div>
+  <div class="column is-2 game-data" id="bugcount">5</div>
+  <div class="column is-2 game-data" id="difficulty">Easy</div>
+  <div class="column is-2 game-data" "timer" id="timer">00:00:00</div>
+  <div class="column is-3"></div>
+</div>
+<div class="columns is-mobile">
+  <div class="column is-3"></div>
+  <div class="column has-text-centered is-6" id="gamebox-container">
+    <div id="row">
+      <div class="col">
         <img id="0" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="1" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="2" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="3" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="4" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
-    </div>
-    <div class="col">
+      </div>
+      <div class="col">
         <img id="5" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="6" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="7" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="8" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="9" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
-    </div>
-    <div class="col">
+      </div>
+      <div class="col">
         <img id="10" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="11" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="12" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="13" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="14" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
-    </div>
-    <div class="col">
+      </div>
+      <div class="col">
         <img id="15" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="16" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="17" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="18" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="19" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
-    </div>
-    <div class="col">
+      </div>
+      <div class="col">
         <img id="20" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="21" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="22" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="23" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
         <img id="24" class="circle" data-lit="false" src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png">
+      </div>
     </div>
+  </div>
+  <div class="column is-3"></div>
 </div>
+
+{{!-- Instructions Modal --}}
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success">Save changes</button>
+      <button class="button">Cancel</button>
+    </footer>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  $(window).on('load', function () {
+    $('.modal').modal('show');
+  });
+</script>
 
 <script src="/js/game.js"></script>

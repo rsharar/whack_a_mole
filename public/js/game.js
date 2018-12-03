@@ -1,26 +1,101 @@
-// var board = [[], []];
-var moles = 5;
-var gridSize = 25;
-// DIFFICULTY SETTINGS (database) CORRESPOND TO DIFFERENT SIZES / TOTAL MOLES
+$(document).ready(function () {
 
-function randomize() {
+    var moles = 5;
+    var gridSize = 25;
     var moleIndexes = [];
-    for (i=0; i<moles; i++) {
-        moleIndexes.push(Math.floor(Math.random() * Math.floor(gridSize)));
+
+    // DIFFICULTY SETTINGS (database) CORRESPOND TO DIFFERENT SIZES / TOTAL MOLES
+
+    // Run program
+    placeMoles();
+    start();
+    // -----------
+
+    function randomize() {
+        for (i = 0; i < moles; i++) {
+            var rand = Math.floor(Math.random() * Math.floor(gridSize));
+            if (moleIndexes.includes(rand)) {
+                i--;
+            } else {
+                moleIndexes.push(rand);
+            }
+        }
     }
-    return moleIndexes;
-}
 
-function placeMoles() {
-    var moleIds = randomize();
-    for (i=0; i<moleIds.length; i++) {
-
+    function placeMoles() {
+        randomize();
+        for (i = 0; i < moleIndexes.length; i++) {
+            $("#" + moleIndexes[i]).attr("data-lit", "true").css("filter", "hue-rotate(0deg)");
+            // console.log(moleIndexes[i]);
+        }
     }
-}
 
-// $(".circle").css("filter", "hue-rotate(-120deg)")
+    function resetMoles() {
+        for (i = 0; i < moleIndexes.length; i++) {
+            $("#" + moleIndexes[i]).attr("data-lit", "false").css("filter", "hue-rotate(120deg) brightness(1.5) grayscale(30%)");
+        }
+        moleIndexes = [];
+        placeMoles();
+    }
 
-//randomly choose three id #s
-//set the data-lit of chosen elements to true
-//set the filter on data-lit == true elements to 0% (red)
-//on click of data-lit == true elements, set to false, decrement moles, and repeat steps until no moles left
+    $(document).on("click", '[data-lit="true"]', function () {
+        // console.log("mole clicked")
+        moles--;
+        if (moles === 0) {
+            $(this).attr("data-lit", "false").css("filter", "hue-rotate(120deg) brightness(1.5) grayscale(30%)")
+            stop();
+            console.log("WIN")
+        } else {
+            resetMoles();
+        }
+    })
+
+    // Stopwatch code
+    var time = 0;
+
+    function reset() {
+        time = 0;
+
+        $("#timer").text("00:00");
+    }
+
+    function start() {
+        intervalId = setInterval(count, 10);
+    }
+
+    function stop() {
+        console.log("stopping");
+        clearInterval(intervalId);
+    }
+
+    function count() {
+        time++;
+        var converted = timeConverter(time);
+        $("#timer").text(converted);
+    }
+
+    function timeConverter(t) {
+        var minutes = Math.floor(t / 6000);
+        var seconds = Math.floor(t / 100) - (minutes * 60);
+        var hundredths = (t - (seconds * 100)) - (minutes * 6000);
+
+        if (hundredths < 10) {
+            hundredths = "0" + hundredths;
+        }
+
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+
+        if (minutes === 0) {
+            minutes = "00";
+        }
+        else if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+
+        return minutes + ":" + seconds + "." + hundredths;
+    }
+
+
+});
