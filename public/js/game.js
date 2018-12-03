@@ -3,6 +3,7 @@ $(document).ready(function () {
     var moles = 5;
     var gridSize = 25;
     var moleIndexes = [];
+    var time = 0;
 
     // DIFFICULTY SETTINGS (database) CORRESPOND TO DIFFERENT SIZES / TOTAL MOLES
 
@@ -41,6 +42,7 @@ $(document).ready(function () {
     $(document).on("click", '[data-lit="true"]', function () {
         // console.log("mole clicked")
         moles--;
+        $("#bugcount").text(moles)
         if (moles === 0) {
             $(this).attr("data-lit", "false").css("filter", "hue-rotate(120deg) brightness(1.5) grayscale(30%)")
             stop();
@@ -51,7 +53,6 @@ $(document).ready(function () {
     })
 
     // Stopwatch code
-    var time = 0;
 
     function reset() {
         time = 0;
