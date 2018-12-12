@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
+    <title>Whack a Bug</title>
+</head>
+
+<body>
+    <section class="hero is-info is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-6 is-offset-3">
+                    <h1 class="title">
+                        WHACK-A-BUG
+                    </h1>
+                    <a href="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/256x256/bug.png"></a>
+                    <h2 class="subtitle"><i>
+                        Stressed? Frustrated? Let it out and Whack-A-Bug
+                    </i>
+                    </h2>
+                    <div>
+                        <div>
+                            <% if (user) { %>
+                            <a class="button is-primary login-btn" href="/profile">TAKE ME TO MY PROFILE</a>
+                            <% } else { %>
+                            <a class="button is-light login-btn" href="/auth/google">LOG IN</a>
+                            <a class="button is-primary login-btn" href="https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp">
+                                <strong>SIGN UP</strong>
+                            </a>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- {{!-- Footer --}} -->
+    <div class="columns">
+        <div class="column is-12 content has-text-centered" id="footer">
+            <p>
+                <strong>Whack-A-Bug</strong><a href="https://github.com/albertcoder/whack-a-bug"> source code</a>. The source code is
+                licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
