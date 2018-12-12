@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+    <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
+    <title>Whack a Mole</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="notification">
+            <!-- {{!-- Header --}} -->
+            <nav class="navbar" role="navigation" aria-label="main navigation" id="gameplay-nav">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/profile">
+                        <img src="/img/splatlogo.png" width="40" height="50">
+                    </a>
+                    <div class="navbar-item">
+                        Whack-A-Bug
+                    </div>
+
+                </div>
+                <div class="navbar-end navbar-item">
+                    <a class="navbar-item button is-outlined" href="/auth/logout">Log Out</a>
+                </div>
+            </nav>
+
+
+            <!-- {{!-- Play Button --}} -->
+            <div class="columns is-mobile has-text-centered">
+                <div class="column">
+                    <a class="button is-primary" id="playbtn" href="/game/gameplay">PLAY NEW GAME!</a>
+                </div>
+            </div>
+
+            <!-- {{!-- Leaderboards --}} -->
+            <div class="columns is-mobile is-centered" id="landing-page-container">
+                <div class="column leaderboard is-narrow">
+                    PERSONAL BEST
+                    <div class="column">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Level (Difficulty)</th>
+                                    <th>Score (Sec)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <table class="table"> -->
+                                <% for(var i=0; i<userData.length+1; i++) {%>
+                                <tr>
+                                    <td>
+                                        <%= userData[1][i].difficulty %>
+                                    </td>
+                                    <td>
+                                        <%= userData[1][i].score %>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="column leaderboard is-narrow">
+                    GLOBAL LEADERBOARD
+                    <div class="column">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Username</th>
+                                    <th>Level (Difficulty)</th>
+                                    <th>Score (Sec)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i=0; i<userData.length+1; i++) {%>
+                                <tr>
+                                    <td>
+                                        <%= userData[0][i].postedBy %>
+                                    </td>
+                                    <td>
+                                        <%= userData[0][i].difficulty %>
+                                    </td>
+                                    <td>
+                                        <%= userData[0][i].score %>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- {{!-- Footer --}} -->
+            <div class="columns">
+                <div class="column is-12 content has-text-centered" id="footer">
+                    <p>
+                        <strong>Whack-A-Bug</strong><a href="https://github.com/albertcoder/whack-a-bug"> source code</a>.
+                        The source code is
+                        licensed
+                        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
